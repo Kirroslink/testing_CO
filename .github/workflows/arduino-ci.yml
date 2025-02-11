@@ -28,3 +28,6 @@ jobs:
       - name: Compile Sketch
         run: |
           arduino-cli compile --fqbn arduino:avr:uno your-sketch.ino
+      - name: Upload to Arduino
+        run: |
+          arduino-cli upload -p COM17 --fqbn arduino:avr:uno your-sketch.ino
